@@ -1,4 +1,7 @@
 package app.hmprinter.com.Constants
 
-class APIConstant {
+object ApiConstant {
+
+    const val getByStoreCode = "api/restaurant/get/bystoreCode/?"
+    const val socketConnectionUrl = "https://on.hostedmenu.com?model=mobile&restaurantId="
 }
