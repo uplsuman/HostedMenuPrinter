@@ -1,4 +1,7 @@
 package app.hmprinter.com.Interfaces
 
-class SocketCallbacks {
+interface SocketCallbacks {
+    fun onSocketConnect()
+
+    fun onSocketMessage()
 }

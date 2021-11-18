@@ -23,7 +23,7 @@ class LoginScreenFragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_login_screen, container, false)
         initBackPressed()
-        red
+
         return view
     }
 
