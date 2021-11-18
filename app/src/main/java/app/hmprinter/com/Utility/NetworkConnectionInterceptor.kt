@@ -21,7 +21,7 @@ class NetworkConnectionInterceptor(private val mContext: Context) :
         return chain.proceed(builder.build())
     }
 
-    val isConnected: Boolean
+    private val isConnected: Boolean
         get() {
             val connectivityManager =
                 mContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -32,9 +32,7 @@ class NetworkConnectionInterceptor(private val mContext: Context) :
                 return when {
                     actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
                     actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
-                    //for other device how are able to connect with Ethernet
                     actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
-                    //for check internet over Bluetooth
                     actNw.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> true
                     else -> false
                 }

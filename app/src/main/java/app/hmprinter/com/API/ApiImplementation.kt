@@ -1,19 +1,17 @@
-package app.hmprinter.com.Utility
+package app.hmprinter.com.API
 
 import android.content.Context
-import app.hmprinter.com.API.ApiClient
-import app.hmprinter.com.API.ApiInterface
 import app.hmprinter.com.Models.RestaurantResponse
+import app.hmprinter.com.Utility.NoConnectivityException
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class RetrofitUtility {
-    private val TAG = RetrofitUtility::class.java.name
+class ApiImplementation {
+    private val TAG = ApiImplementation::class.java.name
 
-    fun getSurvey(context: Context, serialNum: String?) {
-
+    fun getRestaurant(context: Context) {
         val apiService: ApiInterface =
             ApiClient.getHMAppClient(context)!!.create(ApiInterface::class.java)
         // TODO: get restaurant
