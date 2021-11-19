@@ -24,8 +24,9 @@ class SplashScreenFragment : Fragment() {
 
     private fun redirectToLoginScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.login_screen_fragment)
-        }, 3000)
+            findNavController()
+                .navigate(R.id.action_splash_screen_to_login_screen)
+        }, 100)
     }
 
     companion object{

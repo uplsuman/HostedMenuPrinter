@@ -9,9 +9,8 @@ import retrofit2.http.Query
 interface ApiInterface {
 
     @GET(ApiConstant.getByStoreCode)
-    fun getRestaurant(
-        @Query("storeCode") storeCode: String,
-        @Query("restaurantEmail") restaurantEmail: String
+    fun getRestaurant(@Query("storeCode") storeCode: String,
+        @Query("restaurantEmail",encoded = true) restaurantEmail: String
     ): Call<RestaurantResponse>
 
 }

@@ -21,12 +21,13 @@
         tools:layout="@layout/fragment_login_screen" >
         <action
             android:id="@+id/action_login_screen_fragment_to_printer_selection_screen_fragment"
-            app:destination="@id/printer_selection_screen_fragment" />
+            app:destination="@id/printer_selection_screen_fragment"
+          />
     </fragment>
 
     <fragment
         android:id="@+id/printer_selection_screen_fragment"
-        android:name="app.hmprinter.com.Fragments.LoginScreenFragment"
+        android:name="app.hmprinter.com.Fragments.SelectPrinterFragment"
         tools:layout="@layout/fragment_select_printer" >
         <action
             android:id="@+id/action_printer_selection_screen_fragment_to_receive_order_screen_fragment"
@@ -35,7 +36,7 @@
 
     <fragment
         android:id="@+id/receive_order_screen_fragment"
-        android:name="app.hmprinter.com.Fragments.LoginScreenFragment"
+        android:name="app.hmprinter.com.Fragments.ReceivingOrderFragment"
         tools:layout="@layout/fragment_receiving_order" >
         <action
             android:id="@+id/action_receive_order_screen_fragment_to_login_screen_fragment"

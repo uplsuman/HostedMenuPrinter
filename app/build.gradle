@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "String", 'HM_PRINTER_BASE_URL', "\"https://api.hostedmenu.com/\""
+            buildConfigField "String", 'HM_PRINTER_BASE_URL', "\"https://api.bigshowtrucks.com/\""
         }
 
         release {
