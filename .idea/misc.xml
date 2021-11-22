@@ -3,7 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/layout/fragment_login_screen.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable-xxhdpi/custom_login_btn.xml" value="0.25076923076923074" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable/bluetooth_devices.xml" value="0.2703125" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable/custom_edit_text.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable/custom_login_btn.xml" value="0.25076923076923074" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable/ic_check_circle.xml" value="0.1390625" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/drawable/ic_circle.xml" value="0.2703125" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/layout/bluetooth_device.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/layout/fragment_login_screen.xml" value="0.176" />
+        <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/layout/fragment_select_printer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/suman/AndroidStudioProjects/HostedMenuPrinter/app/src/main/res/layout/fragment_splash_screen.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/fragment_login_screen.xml" value="0.2296195652173913" />

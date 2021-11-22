@@ -1,10 +1,15 @@
 package app.hmprinter.com.Fragments
 
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -23,6 +28,7 @@ class LoginScreenFragment : Fragment() {
     private val TAG = LoginScreenFragment::class.java.name
     private lateinit var mViewModel: LoginViewModel
     lateinit var dataStoreManager: DataStoreManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dataStoreManager = DataStoreManager(requireActivity())
@@ -40,7 +46,6 @@ class LoginScreenFragment : Fragment() {
     }
 
     private fun initClicks() {
-        mViewModel.login(null,null)
     }
 
     private fun initViewModel() {
@@ -71,6 +76,38 @@ class LoginScreenFragment : Fragment() {
             }
         requireActivity().onBackPressedDispatcher.addCallback(requireActivity(), callback)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val show_pass_btn: ImageView = view.findViewById(R.id.show_pass_btn)
+        val et_pswd: EditText = view.findViewById(R.id.et_pswd)
+        val et_email: EditText = view.findViewById(R.id.et_email)
+        val btn_login: Button = view.findViewById(R.id.btn_login)
+
+        show_pass_btn.setOnClickListener(View.OnClickListener {
+
+                if(et_pswd.transformationMethod.equals(PasswordTransformationMethod.getInstance())){
+                    show_pass_btn.setImageResource(R.drawable.pswd_visibility_on)
+
+                    //Show Password
+                    et_pswd.transformationMethod = HideReturnsTransformationMethod.getInstance();
+                }
+                else{
+                    show_pass_btn.setImageResource(R.drawable.pswd_visibility_off)
+
+                    //Hide Password
+                    et_pswd.transformationMethod = PasswordTransformationMethod.getInstance();
+
+                }
+        })
+
+        btn_login.setOnClickListener(View.OnClickListener {
+                    mViewModel.login(et_pswd.text.toString(),et_email.text.toString())
+        })
+
+    }
+
 
     companion object {
 

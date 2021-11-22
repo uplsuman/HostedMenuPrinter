@@ -31,7 +31,7 @@ class SplashScreenFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController()
                 .navigate(R.id.action_splash_screen_to_login_screen)
-        }, 100)
+        }, 2000)
     }
 
     companion object{
