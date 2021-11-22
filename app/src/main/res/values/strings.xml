@@ -2,4 +2,6 @@
     <string name="app_name">HM Printer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="easy_connect">Easy Connect</string>
+    <string name="hm_tag_line">Connect your device with the printer and print your bills. It’s that easy.</string>
 </resources>
