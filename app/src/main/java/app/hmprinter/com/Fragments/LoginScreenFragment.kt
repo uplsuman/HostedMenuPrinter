@@ -11,7 +11,6 @@ import kotlin.system.exitProcess
 
 
 class LoginScreenFragment : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

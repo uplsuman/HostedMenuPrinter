@@ -17,9 +17,14 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", 'HM_PRINTER_BASE_URL', "\"https://api.hostedmenu.com/\""
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", 'HM_PRINTER_BASE_URL', '"https://api.hostedmenu.com/"'
         }
     }
     compileOptions {
@@ -46,6 +51,9 @@ dependencies {
     implementation('io.socket:socket.io-client:1.0.0') {
         exclude group: 'org.json', module: 'json'
     }
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.0.1'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
