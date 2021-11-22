@@ -19,7 +19,12 @@ class SplashScreenFragment : Fragment() {
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_splash_screen, container, false)
         redirectToLoginScreen()
+        checkIfLoggedIn()
         return view
+    }
+
+    private fun checkIfLoggedIn() {
+
     }
 
     private fun redirectToLoginScreen() {

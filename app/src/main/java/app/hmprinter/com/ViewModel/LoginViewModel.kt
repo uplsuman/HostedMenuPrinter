@@ -16,8 +16,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     private var mRepository: LoginRepository =
         LoginRepository(application.applicationContext).getInstance()!!
 
-    fun login(storeCode: String, restaurantEmail: String) {
-
+    fun login(storeCode: String?, restaurantEmail: String?) {
         mRepository.login(storeCode, restaurantEmail, object : CustomCallbacks {
             override fun onSuccess(value: RestaurantResponse) {
                 Log.d(TAG, "onSuccess - $value")
@@ -31,5 +30,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         })
 
     }
+
 
 }
