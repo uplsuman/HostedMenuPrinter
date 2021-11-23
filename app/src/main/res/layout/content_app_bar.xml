@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SelectPrinterFragment">
-
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar">
     <RelativeLayout
         android:id="@+id/hm_printer_header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bottom_border"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/_5sdp"
-        android:paddingBottom="10dp"
         >
+
         <ImageView
             android:id="@+id/hm_printer_header_text"
             android:layout_width="@dimen/_130sdp"
@@ -33,18 +31,6 @@
             android:src="@drawable/ic_baseline_power" />
     </RelativeLayout>
 
-<!--     <include android:id="@+id/app_bar" layout="@layout/app_bar" /> -->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_device_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:paddingStart="14dp"
-        android:paddingEnd="14dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/app_bar"
-        tools:listitem="@layout/bluetooth_device" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

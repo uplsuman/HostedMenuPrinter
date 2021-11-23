@@ -8,4 +8,6 @@ object AppConstant {
     const val DATASTORE_NAME = "HmPrinter"
     const val IS_LOGGED_IN = "isLoggedIn"
     const val RESTAURANT_DATA = "restaurantData"
+    const val REQUEST_ENABLE_BT = 1
+
 }
