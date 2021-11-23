@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -79,12 +80,10 @@ class LoginScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val show_pass_btn: ImageView = view.findViewById(R.id.show_pass_btn)
         val et_pswd: EditText = view.findViewById(R.id.et_pswd)
         val et_email: EditText = view.findViewById(R.id.et_email)
         val btn_login: Button = view.findViewById(R.id.btn_login)
-
         show_pass_btn.setOnClickListener(View.OnClickListener {
 
                 if(et_pswd.transformationMethod.equals(PasswordTransformationMethod.getInstance())){

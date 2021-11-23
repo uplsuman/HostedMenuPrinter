@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,18 +14,7 @@
     tools:context=".Fragments.LoginScreenFragment">
 
 
-<ImageView
-    android:id="@+id/hm_printer_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/hm_printer_txt"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_marginTop="@dimen/_150sdp"
-    />
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:id="@+id/et_email"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
@@ -45,6 +40,17 @@
 <!--            />-->
 
 <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <ImageView
+        android:id="@+id/hm_printer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:src="@drawable/hm_printer_txt"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_email"
@@ -74,18 +80,19 @@
         android:background="@drawable/custom_edit_text"
         android:inputType="textEmailAddress"
         android:textSize="@dimen/_13sdp"/>
+
     <TextView
         android:id="@+id/tv_pswd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="24dp"
+        android:text="Password"
+        android:textColor="#000000"
+        android:textSize="@dimen/_13sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email"
-        android:layout_marginHorizontal="@dimen/_17sdp"
-        android:textSize="@dimen/_13sdp"
-        android:text="Password"
-        android:textColor="#000000"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <RelativeLayout
         android:id="@+id/rl_pswd"
@@ -154,3 +161,4 @@
 <!--    </RelativeLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
