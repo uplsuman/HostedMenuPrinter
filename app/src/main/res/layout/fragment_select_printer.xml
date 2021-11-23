@@ -6,40 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.SelectPrinterFragment">
-    <RelativeLayout
-        android:id="@+id/hm_printer_header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/_5sdp"
-        >
-
-        <ImageView
-            android:id="@+id/hm_printer_header_text"
-            android:layout_width="@dimen/_130sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:src="@drawable/hm_printer_header_text" />
-        <ImageView
-            android:id="@+id/show_pass_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_baseline_power" />
-    </RelativeLayout>
+    <include android:id="@+id/app_bar" layout="@layout/app_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_device_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/hm_printer_header"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="84dp"
         android:paddingStart="14dp"
         android:paddingEnd="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/app_bar"
         tools:listitem="@layout/bluetooth_device" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
