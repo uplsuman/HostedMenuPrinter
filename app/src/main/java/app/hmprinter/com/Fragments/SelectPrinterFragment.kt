@@ -14,7 +14,11 @@ import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import app.hmprinter.com.Adapters.DeviceListAdapter
+import app.hmprinter.com.Activities.BottomSheet
+import app.hmprinter.com.R
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import app.hmprinter.com.Constants.AppConstant
+
 
 
 class SelectPrinterFragment : Fragment() {
@@ -24,6 +28,8 @@ class SelectPrinterFragment : Fragment() {
     private var mPrinterName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val bottomSheetFragment = BottomSheet();
+        bottomSheetFragment.show(requireActivity().supportFragmentManager, "Bottom Sheet Dialog" )
         super.onCreate(savedInstanceState)
 
     }
