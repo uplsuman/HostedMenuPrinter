@@ -11,22 +11,17 @@ import android.view.View
 import android.view.ViewGroup
 import app.hmprinter.com.R
 import android.content.Intent
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import app.hmprinter.com.Adapters.CustomDeviceAdapter
+import app.hmprinter.com.Adapters.DeviceListAdapter
 import app.hmprinter.com.Constants.AppConstant
-import app.hmprinter.com.Models.BluetoothDevicesModel
 
 
 class SelectPrinterFragment : Fragment() {
     private val TAG = SelectPrinterFragment::class.java.name
     var btAdapter: BluetoothAdapter? = null
     private lateinit var btDevices: Set<BluetoothDevice>
+    private var mPrinterName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,13 +83,8 @@ class SelectPrinterFragment : Fragment() {
         val rv_device_list: RecyclerView = view.findViewById(R.id.rv_device_list)
         rv_device_list.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL, false)
 
-        val devices = ArrayList<BluetoothDevicesModel>()
-        for (device in btDevices) {
-            devices.add(BluetoothDevicesModel(device.name) { device.address })
-        }
-
-
-        val adapter = CustomDeviceAdapter(devices)
+        val bluetoothDevices = ArrayList(btDevices)
+        val adapter = DeviceListAdapter(bluetoothDevices)
         rv_device_list.adapter = adapter
     }
 

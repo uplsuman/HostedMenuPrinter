@@ -104,6 +104,7 @@ class LoginScreenFragment : Fragment() {
 
         btn_login.setOnClickListener(View.OnClickListener {
                     mViewModel.login(et_pswd.text.toString(),et_email.text.toString())
+
         })
 
     }
