@@ -6,7 +6,9 @@ plugins {
 
 android {
     compileSdk 31
-
+    lintOptions {
+        abortOnError false
+    }
     defaultConfig {
         applicationId "app.hmprinter.com"
         minSdk 21
@@ -16,7 +18,17 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
 
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
     buildTypes {
         debug {
             buildConfigField "String", 'HM_PRINTER_BASE_URL', "\"https://api.bigshowtrucks.com/\""
@@ -26,6 +38,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", 'HM_PRINTER_BASE_URL', "\"https://api.bigshowtrucks.com/\""
+
         }
     }
     compileOptions {
@@ -64,8 +77,4 @@ dependencies {
 
 // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-
-    implementation ("androidx.browser:browser:1.4.0"){
-        force = true
-    }
 }
